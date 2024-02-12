@@ -1,4 +1,3 @@
-print("loaded lsp")
 vim.lsp.set_log_level("debug")
 return {
     "neovim/nvim-lspconfig",
@@ -35,11 +34,11 @@ return {
                 "dockerls",  -- docker
                 "eslint",
                 "gopls",     -- go
+                "helm_ls",   -- Helm
                 "jsonls",    -- json
                 "lua_ls",    -- lua
-                "autotools-language-server", -- make
                 "marksman",  -- markdown
-                "puppet", 
+                "puppet",
                 "jedi_language_server", -- python
                 "taplo",     -- toml
                 "terraformls",          -- Terraform

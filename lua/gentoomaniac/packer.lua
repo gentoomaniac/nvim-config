@@ -24,22 +24,37 @@ return require('packer').startup(function(use)
   use 'glepnir/galaxyline.nvim'
   use 'Avimitin/nerd-galaxyline'
   --use 'hardcoreplayers/spaceline.vim'
-  -- if use nvim-web-devicons
+  --[[
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+  ]]--
   use {
     'yamatsum/nvim-nonicons',
     requires = {'kyazdani42/nvim-web-devicons'}
   }
 
   -- Colorschemes
+  --[[
   use({ "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 , config = function()
       vim.cmd('colorscheme moonfly')
     end
+  })
+  --]]
+  use("folke/tokyonight.nvim")
+  use({
+      "rose-pine/neovim",
+      as = "rose-pine",
+      config = function()
+          vim.cmd("colorscheme rose-pine")
+      end
   })
 
   use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
 
   use 'nvim-lua/plenary.nvim'
-  use 'ThePrimeagen/harpoon'
+--  use 'ThePrimeagen/harpoon'
   use 'mbbill/undotree'
 
   use {

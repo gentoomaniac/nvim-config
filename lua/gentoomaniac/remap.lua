@@ -1,14 +1,24 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
 
+-- indent with < >
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", "<", ">gv")
 
--- Window management
---vim.keymap.set("n", "<C-H>", "<C-W>H")
---vim.keymap.set("n", "<C-J>", "<C-W>J")
---vim.keymap.set("n", "<C-K>", "<C-W>K")
---vim.keymap.set("n", "<C-L>", "<C-W>L")
+vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.keymap.set("n", "Q", "<nop>")
 
---vim.keymap.set("n", "<leader>n", vim.cmd.tabnext)
+-- yank into system clipboard 
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+-- jumps
+vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
+vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
+vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
+vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+
+vim.keymap.set("n", "<leader><leader>", function()
+    vim.cmd("so")
+end)
 
