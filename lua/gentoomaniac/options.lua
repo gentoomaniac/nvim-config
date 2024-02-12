@@ -4,7 +4,7 @@ vim.opt.number = true
 vim.opt.relativenumber = false
 vim.opt.title = true
 vim.opt.colorcolumn = "120"
---vim.opt.listchars= "ol:↵,trail:~,tab:>-,nbsp:␣"
+--vim.opt.listchars = { eol = "↵", trail = "~", tab = ">", nbsp = "␣" }
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -20,3 +20,4 @@ vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
+vim.opt.inccommand = "nosplit"
