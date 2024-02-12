@@ -1,10 +1,10 @@
 vim.opt.hlsearch = true
 vim.opt.list = true
 vim.opt.number = true
+vim.opt.relativenumber = false
 vim.opt.title = true
-vim.opt.pastetoggle = "<F2>"
 vim.opt.colorcolumn = "120"
-
+--vim.opt.listchars= "ol:↵,trail:~,tab:>-,nbsp:␣"
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4

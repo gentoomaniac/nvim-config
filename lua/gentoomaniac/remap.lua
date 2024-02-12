@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
+--vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
+vim.api.nvim_set_keymap('n', '<C-e>', '<cmd>NvimTreeFocus<CR>', { noremap = true })
 
 -- indent with < >
 vim.keymap.set("v", "<", "<gv")
@@ -7,6 +8,11 @@ vim.keymap.set("v", "<", ">gv")
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "Q", "<nop>")
+
+--vim.keymap.set("n", "<C-h>", "<C-w><C-h>")
+--vim.keymap.set("n", "<C-j>", "<C-w><C-j>")
+--vim.keymap.set("n", "<C-k>", "<C-w><C-k>")
+--vim.keymap.set("n", "<C-l>", "<C-w><C-l>")
 
 -- yank into system clipboard 
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
