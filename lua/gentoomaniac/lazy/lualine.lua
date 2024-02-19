@@ -6,7 +6,17 @@ return {
           options = {
             icons_enabled = true,
             theme = 'powerline'
-          }
-        })
+          },
+
+          sections = {
+            lualine_c = {{
+                "buffers",
+                symbols = {
+                    modified = "●",
+                },
+                },
+            },
+         },
+      })
     end
 }
