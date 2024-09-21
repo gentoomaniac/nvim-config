@@ -1,21 +1,23 @@
+-- alt is the new leader
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
 --vim.api.nvim_set_keymap('n', '<C-e>', '<cmd>NvimTreeFocus<CR>', { noremap = true })
 
 -- indent with < >
 vim.keymap.set("v", "<", "<gv")
-vim.keymap.set("v", "<", ">gv")
+vim.keymap.set("v", ">", ">gv")
 
+-- ctrl+c as additional Esc
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "Q", "<nop>")
 
---vim.keymap.set("n", "<C-h>", "<C-w><C-h>")
---vim.keymap.set("n", "<C-j>", "<C-w><C-j>")
---vim.keymap.set("n", "<C-k>", "<C-w><C-k>")
---vim.keymap.set("n", "<C-l>", "<C-w><C-l>")
+-- move between splits
+vim.keymap.set("n", "<C-h>", "<C-w><C-h>")
+vim.keymap.set("n", "<C-j>", "<C-w><C-j>")
+vim.keymap.set("n", "<C-k>", "<C-w><C-k>")
+vim.keymap.set("n", "<C-l>", "<C-w><C-l>")
 
-
--- move block
+-- move block up/duwn
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
