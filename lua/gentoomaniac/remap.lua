@@ -65,7 +65,5 @@ vim.keymap.set('n','<leader>ao','<cmd>lua vim.lsp.buf.outgoing_calls()<CR>')
 
 -- buffers
 vim.keymap.set('n','<leader>n','<cmd>bnext<CR>')
-vim.keymap.set('i','<leader>n','<cmd>bnext<CR>')
 vim.keymap.set('n','<leader>p','<cmd>bprev<CR>')
-vim.keymap.set('i','<leader>p','<cmd>bprev<CR>')
 

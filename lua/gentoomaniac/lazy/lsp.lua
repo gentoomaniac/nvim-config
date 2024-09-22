@@ -42,7 +42,7 @@ return {
                 "jedi_language_server", -- python
                 "taplo",     -- toml
                 "terraformls",          -- Terraform
-                "tsserver",  -- typescript
+            -- "tsserver",  -- typescript
                 "hydra_lsp", -- yaml
             },
             handlers = {
@@ -80,7 +80,7 @@ return {
             mapping = cmp.mapping.preset.insert({
                 ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
                 ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-                ['<Enter>'] = cmp.mapping.confirm({ select = true }),
+                ['<C-y>'] = cmp.mapping.confirm({ select = true }),
                 ["<C-Space>"] = cmp.mapping.complete(),
             }),
             sources = cmp.config.sources({

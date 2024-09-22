@@ -5,7 +5,7 @@ vim.opt.relativenumber = false
 vim.opt.title = true
 vim.opt.colorcolumn = "120"
 -- vim.opt.listchars = { eol = "↵", trail = "~", tab = ">~", space = "␣" }
-vim.opt.listchars = { eol = "↵", trail = "~", tab = ">~", space = "·" }
+vim.opt.listchars = { eol = "↵", trail = "␣", tab = "» ", space = "·" }
 vim.opt.list = true
 
 vim.opt.tabstop = 4
@@ -24,3 +24,8 @@ vim.opt.undofile = true
 
 vim.opt.inccommand = "nosplit"
 
+-- trim trailing whitespaces on save
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+    pattern = { "*" },
+    command = [[%s/\s\+$//e]],
+})
