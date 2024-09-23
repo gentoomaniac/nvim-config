@@ -31,7 +31,7 @@ return {
                 "clangd",    -- c/cpp
                 "cmake",     -- cmake
                 "cssls",     -- css
-                "dockerls",  -- docker
+                "docker-langserver",  -- docker
                 "eslint",
                 "gopls",     -- go
                 "helm_ls",   -- Helm
