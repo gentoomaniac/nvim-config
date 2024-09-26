@@ -1,7 +1,7 @@
 vim.opt.hlsearch = true
 vim.opt.list = true
 vim.opt.number = true
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 vim.opt.title = true
 vim.opt.colorcolumn = "120"
 -- vim.opt.listchars = { eol = "↵", trail = "~", tab = ">~", space = "␣" }
@@ -29,3 +29,19 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     pattern = { "*" },
     command = [[%s/\s\+$//e]],
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "go",
+	callback = function()
+        vim.opt.expandtab = false
+	end
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "yaml",
+	callback = function()
+		vim.opt_local.shiftwidth = 2
+		vim.opt_local.tabstop = 2
+	end
+})
+
