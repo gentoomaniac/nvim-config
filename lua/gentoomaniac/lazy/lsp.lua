@@ -32,7 +32,7 @@ return {
                 "cmake",     -- cmake
                 "cssls",     -- css
                 "docker-langserver",  -- docker
-                "eslint",
+                -- "eslint",
                 "gopls",     -- go
                 "helm_ls",   -- Helm
                 "jsonls",    -- json
@@ -43,7 +43,8 @@ return {
                 "taplo",     -- toml
                 "terraformls",          -- Terraform
             -- "tsserver",  -- typescript
-                "hydra_lsp", -- yaml
+                "yamlls", -- yaml
+                "starpls", -- bazel
             },
             handlers = {
                 function(server_name) -- default handler (optional)

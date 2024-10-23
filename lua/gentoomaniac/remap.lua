@@ -67,3 +67,9 @@ vim.keymap.set('n','<leader>ao','<cmd>lua vim.lsp.buf.outgoing_calls()<CR>')
 vim.keymap.set('n','<leader>n','<cmd>bnext<CR>')
 vim.keymap.set('n','<leader>p','<cmd>bprev<CR>')
 
+-- nvimtree toggle
+vim.keymap.set({'n', 'i', 'v'}, "<leader>t", function()
+    local api = require("nvim-tree.api")
+    api.tree.toggle()
+end)
+
