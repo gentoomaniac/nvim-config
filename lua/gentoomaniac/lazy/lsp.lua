@@ -31,14 +31,16 @@ return {
                 "clangd",    -- c/cpp
                 "cmake",     -- cmake
                 "cssls",     -- css
-                "docker-langserver",  -- docker
+                -- "dockerls",  -- docker
                 -- "eslint",
                 "gopls",     -- go
                 "helm_ls",   -- Helm
                 "jsonls",    -- json
+                "jsonnet_ls",-- jsonnet
                 "lua_ls",    -- lua
                 "marksman",  -- markdown
                 "puppet",
+                "ruff",      -- Python
                 "jedi_language_server", -- python
                 "taplo",     -- toml
                 "terraformls",          -- Terraform
