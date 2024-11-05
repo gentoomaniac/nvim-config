@@ -45,3 +45,9 @@ vim.api.nvim_create_autocmd("FileType", {
 	end
 })
 
+vim.filetype.add({
+  pattern = {
+    [".*/templates/.*%.yaml"] = "helm",
+  },
+})
+
