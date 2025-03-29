@@ -27,30 +27,25 @@ return {
         require("mason").setup()
         require("mason-lspconfig").setup({
             ensure_installed = {
-                "bashls",    -- bash
-                "clangd",    -- c/cpp
-                "cmake",     -- cmake
-                "cssls",     -- css
-                -- "dockerls",  -- docker
-                -- "eslint",
-                "gopls",     -- go
-                "helm_ls",   -- Helm
-                "jsonls",    -- json
-                "jsonnet_ls",-- jsonnet
-                "lua_ls",    -- lua
-                "marksman",  -- markdown
+                "bashls",               -- bash
+                "clangd",               -- c/cpp
+                "cmake",                -- cmake
+                "cssls",                -- css
+                "gopls",                -- go
+                "helm_ls",              -- Helm
+                "jsonls",               -- json
+                "jsonnet_ls",           -- jsonnet
+                "lua_ls",               -- lua
+                "marksman",             -- markdown
                 "puppet",
-                "ruff",      -- Python
                 "jedi_language_server", -- python
-                "taplo",     -- toml
+                "starpls",              --starlak
+                "taplo",                -- toml
                 "terraformls",          -- Terraform
-            -- "tsserver",  -- typescript
-                "yamlls", -- yaml
-                "starpls", -- bazel
+                "yamlls",               -- yaml
             },
             handlers = {
                 function(server_name) -- default handler (optional)
-
                     require("lspconfig")[server_name].setup {
                         capabilities = capabilities
                     }
